@@ -8,9 +8,9 @@
 	<link rel="stylesheet" href="./public/less/main.css">
 </head>
 <body ng-app="Yike">
-	<div class="viewport">
+	<div class="viewport" >
 		<!-- 侧边导航 -->
-		<div ng-class="{navs: true, collapse: collapsed}" ng-controller="NavController">
+		<div class="navs" ng-class="{navs: true, collapse: collapsed}" ng-controller="NavController">
 			<dl>
 				<dt class="login">
 					<div class="avatar">
@@ -18,9 +18,24 @@
 					</div>
 					<span>登录</span>
 				</dt>
-				<dd ng-class="{active: index == key}" ng-repeat="(key, nav) in navs">
-					<a href="{{nav.link}}" ng-click="toggle()" class="{{nav.icon}}">
-						<span>{{nav.text}}</span>
+				<dd class="active">
+					<a href="./index.html" class="icon-home">
+						<span>今日一刻</span>
+					</a>
+				</dd>
+				<dd class="active">
+					<a href="./views/author.html" class="icon-pencil">
+						<span>热门作者</span>
+					</a>
+				</dd>
+				<dd class="active">
+					<a href="./views/category.html" class="icon-file-empty">
+						<span>栏目预览</span>
+					</a>
+				</dd>
+				<dd class="active">
+					<a href="./views/favourite.html" class="icon-heart">
+						<span>我的喜欢</span>
 					</a>
 				</dd>
 			</dl>
